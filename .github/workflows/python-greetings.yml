@@ -20,6 +20,12 @@ jobs:
         with:
           repository: "mtararujs/python-greetings" 
           path: python-greetings
+      - uses: actions/checkout@v4
+        with: 
+          repository: 'GirtsMs/github-actions-darbs'
+          path: 'github-actions-darbs'
+          sparse-checkout: |
+            .github
       - uses: ./github-actions-darbs/.github/actions/install
 
   deploy-to-dev:
