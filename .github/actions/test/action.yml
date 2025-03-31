@@ -1,0 +1,19 @@
+name: "Deploy Node App"
+description: "Compiste action to deploy our node app using pm2"
+inputs: 
+  environment:
+    desctription: 'Environment where to execute tests against'
+    requried: true
+
+runs:
+  using: composite
+  steps:
+    - name: Print step name
+      run: echo "Running test for ${{ inputs.environment}}.."
+      shell: cmd
+    - name: Install all depentdencies
+      run: npm install
+      shell: cmd
+    - name: Run API tests
+      run: npm run greetings greetings_${{ inputs.environment}}
+      shell: cmd

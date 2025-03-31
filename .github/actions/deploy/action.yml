@@ -1,0 +1,21 @@
+name: "Deploy Node App"
+description: "Compiste action to deploy our node app using pm2"
+inputs: 
+  environment:
+    desctription: 'Environment where to deploy Greetings Application'
+    requried: true
+  port:
+    desctription: 'Port for our Greetings Application'
+    requried: true
+runs:
+  using: composite
+  steps:
+    - name: Print step name
+      run: echo "Deployment to ${{ inputs.environment}} has started.."
+      shell: cmd
+    - name: Delete existing pm2 service
+      run: pm2 delete greetings-app-${{ inputs.environment}} & set "errorlevel=0"
+      shell: cmd
+    - name: Run greetings-app pm2 service
+      run: pm2 start app.py --name greetings-app-"${{ inputs.environment}}" -- --port ${{ inputs.port}}"
+      shell: cmd
