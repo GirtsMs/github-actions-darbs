@@ -34,7 +34,7 @@ jobs:
           path: python-greetings
       - uses: ./.github/actions/deploy
         with:
-          environment: 'dev'
+          environment: 'DEV'
           port: '7001'    
 
   test-on-dev:
@@ -48,7 +48,7 @@ jobs:
           path: course-js-api-framework
       - uses: ./.github/actions/test
         with:
-          environment: 'dev'         
+          environment: 'DEV'         
 
   deploy-to-staging:
     runs-on: self-hosted
