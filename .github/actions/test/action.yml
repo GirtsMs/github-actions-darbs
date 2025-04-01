@@ -12,8 +12,10 @@ runs:
       run: echo "Running test for ${{ inputs.environment}}.."
       shell: cmd
     - name: Install all depentdencies
+      working-directory: course-js-api-framework
       run: npm install
       shell: cmd
     - name: Run API tests
+      working-directory: course-js-api-framework
       run: npm run greetings greetings_${{ inputs.environment}}
       shell: cmd
