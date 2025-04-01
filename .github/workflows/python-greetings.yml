@@ -35,7 +35,7 @@ jobs:
       - uses: ./.github/actions/deploy
         with:
           environment: 'dev'
-          port: '6001'    
+          port: '1001'    
 
   test-on-dev:
     runs-on: self-hosted
@@ -62,7 +62,7 @@ jobs:
       - uses: ./.github/actions/deploy
         with:
           environment: 'staging'
-          port: '6002'     
+          port: '2002'     
 
   tests-on-staging:
     runs-on: self-hosted
@@ -89,7 +89,7 @@ jobs:
       - uses: ./.github/actions/deploy
         with:
           environment: 'preprod'
-          port: '6003'
+          port: '3003'
       
   tests-on-preprod:
     runs-on: self-hosted
@@ -116,7 +116,7 @@ jobs:
       - uses: ./.github/actions/deploy
         with:
           environment: 'prod'
-          port: '6004'
+          port: '4004'
 
   tests-on-prod:
     runs-on: self-hosted
