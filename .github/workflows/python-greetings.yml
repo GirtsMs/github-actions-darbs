@@ -20,10 +20,7 @@ jobs:
         with:
           repository: "mtararujs/python-greetings" 
           path: python-greetings
-      - name: Install pip
-        run: |
-          echo "Installing all required dependecies.."
-          py -m pip install -r requirements.txt
+      - uses: ./github-actions-darbs/.github/actions/install
 
   deploy-to-dev:
     runs-on: self-hosted
