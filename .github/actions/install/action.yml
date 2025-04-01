@@ -8,4 +8,4 @@ runs:
     - name: Install all depentdencies
       run: py -m pip install -r requirements.txt
       working-directory: python-greetings
-      shell: bash
+      shell: pwsh
