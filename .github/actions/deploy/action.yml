@@ -23,5 +23,5 @@ runs:
       shell: cmd
     - name: See logs
       working-directory: python-greetings
-      run: pm2 restart greetings-app-dev
+      run: netstat -tulnp  | grep 7001
       shell: cmd
