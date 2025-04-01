@@ -6,6 +6,6 @@ runs:
       run: echo "Installing all required dependecies.."
       shell: cmd
     - name: Install all depentdencies
-      run: py -m pip install -r requirements.txt
+      run: py -m pip install -r python-greetings/requirements.txt
       working-directory: python-greetings
-      shell: pwsh
+      shell: cmd
