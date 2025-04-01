@@ -20,9 +20,8 @@ jobs:
         with:
           repository: "mtararujs/python-greetings" 
           path: python-greetings
-      - uses: ./github-actions-darbs/.github/actions/install
-        with:
           working-directory: python-greetings
+      - uses: ./github-actions-darbs/.github/actions/install   
 
   deploy-to-dev:
     runs-on: self-hosted
