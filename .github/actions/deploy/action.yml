@@ -23,5 +23,5 @@ runs:
       shell: cmd
     - name: See logs
       working-directory: python-greetings
-      run: pm2 logs greetings-app-dev
+      run: pm2 restart greetings-app-dev
       shell: cmd
