@@ -20,13 +20,10 @@ jobs:
         with:
           repository: "mtararujs/python-greetings" 
           path: python-greetings
-      - uses: actions/checkout@v4
-        with: 
-          repository: 'GirtsMs/github-actions-darbs'
-          path: 'github-actions-darbs'
-          sparse-checkout: |
-            .github
-      - uses: ./github-actions-darbs/.github/actions/install
+      - name: Install pip
+        run: |
+          echo "Installing all required dependecies.."
+          pip install -r requirements.txt
 
   deploy-to-dev:
     runs-on: self-hosted
