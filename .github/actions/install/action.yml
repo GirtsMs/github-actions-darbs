@@ -6,5 +6,5 @@ runs:
       run: echo "Installing all required dependecies.."
       shell: cmd
     - name: Install all depentdencies
-      run: pip3 install -r requirements.txt
+      run: pip install -r requirements.txt
       shell: cmd

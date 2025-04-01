@@ -20,6 +20,9 @@ jobs:
         with:
           repository: "mtararujs/python-greetings" 
           path: python-greetings
+      - uses: actions/setup-python@v5
+        with: 
+          python-version: '3.10'
       - uses: actions/checkout@v4
         with: 
           repository: 'GirtsMs/github-actions-darbs'
@@ -36,7 +39,6 @@ jobs:
         with:
           repository: "mtararujs/python-greetings" 
           path: python-greetings
-          working-directory: python-greetings
       - uses: ./.github/actions/deploy
         with:
           environment: 'dev'
@@ -60,8 +62,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: "mtararujs/python-greetings" 
-          path: python-greetings
           working-directory: python-greetings
       - uses: ./.github/actions/deploy
         with:
@@ -74,8 +74,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: "mtararujs/course-js-api-framework" 
-          path: course-js-api-framework
+          working-directory: course-js-api-framework
       - uses: ./github-actions-darbs/.github/actions/test
         with:
           environment: 'staging'       
@@ -86,8 +85,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: "mtararujs/python-greetings" 
-          path: python-greetings
           working-directory: python-greetings
       - uses: ./.github/actions/deploy
         with:
@@ -100,8 +97,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: "mtararujs/course-js-api-framework" 
-          path: course-js-api-framework
+          working-directory: course-js-api-framework
       - uses: ./github-actions-darbs/.github/actions/test
         with:
           environment: 'preprod'        
@@ -112,8 +108,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: "mtararujs/python-greetings" 
-          path: python-greetings
           working-directory: python-greetings
       - uses: ./.github/actions/deploy
         with:
@@ -126,8 +120,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: "mtararujs/course-js-api-framework" 
-          path: course-js-api-framework
+          working-directory: course-js-api-framework
       - uses: ./github-actions-darbs/.github/actions/test
         with:
           environment: 'prod'
