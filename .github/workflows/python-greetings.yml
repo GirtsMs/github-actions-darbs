@@ -46,7 +46,7 @@ jobs:
         with:
           repository: "mtararujs/course-js-api-framework" 
           path: course-js-api-framework
-      - uses: ./github-actions-darbs/.github/actions/test
+      - uses: ./.github/actions/test
         with:
           environment: 'dev'         
 
