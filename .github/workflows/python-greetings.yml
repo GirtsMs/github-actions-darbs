@@ -23,7 +23,7 @@ jobs:
       - name: Install pip
         run: |
           echo "Installing all required dependecies.."
-          pip install -r requirements.txt
+          py -m pip install -r requirements.txt
 
   deploy-to-dev:
     runs-on: self-hosted
