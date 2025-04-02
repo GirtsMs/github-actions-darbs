@@ -62,7 +62,7 @@ jobs:
           path: python-greetings
       - uses: ./.github/actions/deploy
         with:
-          environment: 'staging'
+          environment: 'stg'
           port: '7002'     
 
   tests-on-staging:
@@ -76,7 +76,7 @@ jobs:
           path: course-js-api-framework
       - uses: ./.github/actions/test
         with:
-          environment: 'staging' 
+          environment: 'stg' 
           test-suite: 'greetings'      
 
   deploy-to-preprod:
