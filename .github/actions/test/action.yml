@@ -4,6 +4,9 @@ inputs:
   environment:
     desctription: 'Environment where to execute tests against'
     requried: true
+  test-suite:
+    desctription: 'Testing suite which needs to be executed'
+    default: 'greetings'
 
 runs:
   using: composite
@@ -17,5 +20,5 @@ runs:
       shell: cmd
     - name: Run API tests
       working-directory: course-js-api-framework
-      run: npm run greetings greetings_${{ inputs.environment }}
+      run: npm run ${{ inputs.test-suite}} ${{ inputs.test-suite}}_${{ inputs.environment}}
       shell: cmd

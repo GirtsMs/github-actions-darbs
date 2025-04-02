@@ -48,7 +48,8 @@ jobs:
           path: course-js-api-framework
       - uses: ./.github/actions/test
         with:
-          environment: 'dev'         
+          environment: 'dev'
+          test-suite: 'greetings'         
 
   deploy-to-staging:
     runs-on: self-hosted
@@ -75,7 +76,8 @@ jobs:
           path: course-js-api-framework
       - uses: ./.github/actions/test
         with:
-          environment: 'staging'       
+          environment: 'staging' 
+          test-suite: 'greetings'      
 
   deploy-to-preprod:
     runs-on: self-hosted
@@ -102,7 +104,8 @@ jobs:
           path: course-js-api-framework
       - uses: ./.github/actions/test
         with:
-          environment: 'preprod'        
+          environment: 'preprod'
+          test-suite: 'greetings'        
           
   deploy-to-prod:
     runs-on: self-hosted
@@ -130,4 +133,4 @@ jobs:
       - uses: ./.github/actions/test
         with:
           environment: 'prod'
-          
+          test-suite: 'greetings'
